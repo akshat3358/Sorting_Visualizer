@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorting Visualiser</title>
-</head>
-<body>
-    <h1>Hey there , Welcome to my sorting Visualiser</h1>
-</body>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="array-input">
+          <p>size of the array :</p>
+          <input id="arr_size" type="range" min="10" max="100" step="1" />
+          <p>speed of the array:</p>
+          <input id="arr_speed"  type="range" min="20" max="100" step="20" />
+          <button id="arr_generate">Generate New Array</button>
+        </div>
+
+        <div class="right-header">
+          <p id="heading-nav">Sorting Visualizer</p>
+
+          <div class="btn-algo">
+            <button>Selction</button>
+            <button>Bubble</button>
+            <button>Merge</button>
+            <button>Insertion</button>
+            <button>Quick</button>
+            <button>Heap</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
 </html>
