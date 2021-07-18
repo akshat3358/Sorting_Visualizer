@@ -1,0 +1,198 @@
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  margin-top: 3.5rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+
+body{
+    color: darkblue;
+}
+
+* {
+    box-sizing: border-box;
+}
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 70px;
+    width: 650px;
+    font-size: 59px;
+    margin: 0.3em auto;
+    background-color:palegreen;
+    border-radius: 700px;
+    font-family: 'Prompt', sans-serif;
+    box-shadow: 2px 2px 4px 2px rgb(103, 107, 173);
+} 
+.flex-container{
+    box-shadow: 2px 3px 4px 5px rgb(103, 107, 173);
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 80%;
+    height: 500px;
+    justify-content: center;
+    background-color: white;
+    align-items:flex-end;
+    border-radius: 15px;
+    transition: 2s all ease;
+}
+.flex-item{
+    background: cyan;
+    border: 1pt solid black;
+    width: 12px;
+}
+
+#array {
+    margin: 1em auto;
+}
+
+
+#algo-container {
+    max-width:fit-content;
+    padding-top: 1rem;
+    margin: 1em auto;
+    padding-left: 0.1rem;
+}
+.algo-btn, #generate_array_random {
+    background-color:yellow;
+    margin: 2px 3px;
+
+    color:darkblue;
+    font-size: 2em;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.algo-btn:hover, .algo-btn-active {
+    color: rgb(87, 1, 87);
+    background-color: #bbbdeb;
+    box-shadow: 1px 1px 1px 1px purple;
+}
+
+#generate_array_random:hover {
+    opacity: 0.8;
+}
+
+#change-container {
+    max-width: 300px;
+    margin: 1em auto;
+}
+
+#generate_array_random{
+    background-color:orangered;
+    color: darkblue;
+}
+.slider-container {
+    display: inline-block;
+    margin-left: 20px;
+    background-color: yellow;
+    border: 0.3px solid black;
+    padding: 0.01rem;
+    margin: 4px 2px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    border-radius: 10px;
+
+}
+.slider-container label {
+    display: block;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+.slider {
+    width: 80px;
+    height: 55px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .name{
+        font-size: 0.6rem;
+    }
+    .algo-btn, #generate_random_array{
+        font-size: 0.6rem;
+    }
+    #sliders, label{
+        font-size: 0.6rem;
+    }
+    #algo-container, .slider-container{
+        margin: 0.5rem;
+    }
+    .slider{
+        width: 70px;
+    }
+    #array-container{
+        margin-top: 0.5rem;
+    }
+    .block {
+        display: none;
+    }
+
+}
